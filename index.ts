@@ -3,9 +3,9 @@ var findRotateString = (target: string, value: string, rotateIndex: number): num
         return rotateIndex;
     }
 
-    value = value.substring(value.length-1) + value.substring(0, value.length-1);
+    value = value.substring(value.length - 1) + value.substring(0, value.length - 1);
 
-    if (value.length === rotateIndex){
+    if (value.length === rotateIndex) {
         return -1;
     } else {
         return findRotateString(target, value, rotateIndex + 1);
@@ -15,7 +15,7 @@ var findRotateString = (target: string, value: string, rotateIndex: number): num
 let target: string = "COFFEE";
 let value: string = "ffeeco";
 
-let rotateIndexResult: number = findRotateString(target.toLowerCase(), value.toLowerCase() , 0);
+let rotateIndexResult: number = findRotateString(target.toLowerCase(), value.toLowerCase(), 0);
 
 if (rotateIndexResult !== -1) {
     console.log("Rotation Index : " + rotateIndexResult);
